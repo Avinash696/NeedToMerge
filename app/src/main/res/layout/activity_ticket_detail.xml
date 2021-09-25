@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_200"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_ticket_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ticket Id" />
+
+            <EditText
+                android:id="@+id/et_asset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Asset" />
+
+            <EditText
+                android:id="@+id/et_assign_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Assign To" />
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title" />
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description" />
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:onClick="ImagePicker"
+                android:background="@mipmap/ic_launcher"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_save_verify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="170dp"
+                    android:hint="Save"
+                    />
+
+                <Button
+                    android:id="@+id/bt_close_verify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Close" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>
