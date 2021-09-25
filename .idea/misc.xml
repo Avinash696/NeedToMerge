@@ -3,10 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/NeedToMerge/app/src/main/res/drawable/ic_back.xml" value="0.2846153846153846" />
+        <entry key="..\:/NeedToMerge/app/src/main/res/drawable/item_picker.xml" value="0.2846153846153846" />
+        <entry key="..\:/NeedToMerge/app/src/main/res/font/robotoregular.xml" value="0.29846153846153844" />
         <entry key="..\:/NeedToMerge/app/src/main/res/layout/activity_all_assets_detail_list.xml" value="0.25905797101449274" />
+        <entry key="..\:/NeedToMerge/app/src/main/res/layout/activity_all_assets_list.xml" value="0.25" />
+        <entry key="..\:/NeedToMerge/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/NeedToMerge/app/src/main/res/layout/activity_master_list.xml" value="0.25" />
         <entry key="..\:/NeedToMerge/app/src/main/res/layout/activity_ticket_detail.xml" value="0.25" />
         <entry key="..\:/NeedToMerge/app/src/main/res/layout/activity_ticket_list.xml" value="0.14270833333333333" />
         <entry key="..\:/NeedToMerge/app/src/main/res/layout/adapter_ticket_list.xml" value="0.14270833333333333" />
+        <entry key="..\:/NeedToMerge/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2846153846153846" />
       </map>
     </option>
   </component>
