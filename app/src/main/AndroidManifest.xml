@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NeedToMerge">
         <activity
+            android:name=".ui.MasterDetailListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.AllAssetsDetail"
+            android:exported="true" />
+        <activity
             android:name=".ui.MasterListActivity"
             android:exported="true" />
         <activity
@@ -20,7 +26,7 @@
             android:exported="true" />
         <activity
             android:name=".ui.TicketListActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
