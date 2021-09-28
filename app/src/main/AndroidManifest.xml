@@ -10,14 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NeedToMerge">
         <activity
-            android:name=".ui.MasterDetailListActivity"
+            android:name=".ui.MasterListActivity"
             android:exported="true" />
         <activity
             android:name=".ui.AllAssetsDetail"
             android:exported="true" />
         <activity
-            android:name=".ui.MasterListActivity"
-            android:exported="true" />
+            android:name=".ui.MasterDetailListActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ui.AllAssetsList"
             android:exported="true" />
@@ -30,11 +36,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

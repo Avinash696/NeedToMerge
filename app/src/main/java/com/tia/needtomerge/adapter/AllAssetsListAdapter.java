@@ -6,10 +6,8 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.Toast;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,10 +17,6 @@ import com.tia.needtomerge.R;
 import com.tia.needtomerge.databinding.AdapterAllassetsListBinding;
 import com.tia.needtomerge.model.AllAssetsListModel;
 import com.tia.needtomerge.ui.AllAssetsDetail;
-import com.tia.needtomerge.ui.AllAssetsList;
-import com.tia.needtomerge.ui.MasterListActivity;
-import com.tia.needtomerge.ui.TicketDetailActivity;
-import com.tia.needtomerge.ui.TicketListActivity;
 
 import java.util.ArrayList;
 import java.util.List;

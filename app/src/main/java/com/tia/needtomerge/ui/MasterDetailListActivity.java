@@ -1,57 +1,84 @@
 package com.tia.needtomerge.ui;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.fragment.app.DialogFragment;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.tia.needtomerge.MainActivity;
 import com.tia.needtomerge.R;
-import com.tia.needtomerge.TicketClickListener;
-import com.tia.needtomerge.adapter.TicketListAdapter;
 import com.tia.needtomerge.databinding.ActivityMasterDetailListBinding;
-import com.tia.needtomerge.model.TicketListModel;
+import com.tia.needtomerge.databinding.ActivityMasterListBinding;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Calendar;
 
-public class MasterDetailListActivity extends AppCompatActivity implements TicketClickListener {
-    TicketListAdapter ticketListAdapter;
+public class MasterDetailListActivity extends AppCompatActivity implements
+        AdapterView.OnItemClickListener, AdapterView.OnItemSelectedListener , DatePickerDialog.OnDateSetListener {
     ActivityMasterDetailListBinding binding;
+    Spinner spin;
+    String[] country = { "India", "USA", "China", "Japan", "Other"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        binding= DataBindingUtil. setContentView(this,R.layout.activity_master_detail_list);
-       setAdapter();
+        getSupportActionBar().hide();
+        spin = findViewById(R.id.sp_assetsDetail);
+        spin.setOnItemSelectedListener(this);
+        setSpinnerAdapter();
+
     }
-    private void populateData() {
-        Log.d("rawat", "populateData: ");
-        List<TicketListModel> dataModelList = new ArrayList<>();
+    private void setSpinnerAdapter(){
+        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,country);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Setting the ArrayAdapter data on the Spinner
+        spin.setAdapter(aa);
 
-        dataModelList.add(new TicketListModel("Assets", "AsignTo", "Status", "Title", "Image", "Description"));
-        dataModelList.add(new TicketListModel("Assets", "AsignTo", "Status", "Title", "Image", "Descrption"));
-        dataModelList.add(new TicketListModel("Assets", "AsignTo", "Status", "Title", "Image", "Descroption"));
-        dataModelList.add(new TicketListModel("Assets", "AsignTo", "Status", "Title", "Image", "Descption"));
-        dataModelList.add(new TicketListModel("Assets", "AsignTo", "Status", "Title", "Image", "Descrtion"));
-        dataModelList.add(new TicketListModel("Assets", "AsignTo", "Status", "Title", "Image", "Deson"));
-
-        //call adapter
-        ticketListAdapter = new TicketListAdapter(dataModelList, this, this);
-        binding.rvTicketList.setAdapter(ticketListAdapter);
-        ticketListAdapter.notifyDataSetChanged();
-    }
-
-    private void setAdapter() {
-        Log.d("rawat", "setAdapter: ");
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        binding.rvTicketList.setLayoutManager(linearLayoutManager);
-        populateData();
     }
 
     @Override
-    public void cardClicked(TicketListModel f) {
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Toast.makeText(getApplicationContext(),country[i] , Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        Toast.makeText(getApplicationContext(),country[i] , Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+///later
+    }
+
+    public void FnDatePicker(View view) {
 
     }
+
+    @Override
+    public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+
+    }
+
+//    @NonNull
+//    @Override
+//    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+//        final Calendar c =Calendar.getInstance();
+//        int y =c.get(Calendar.YEAR);
+//        int m =c.get(Calendar.DAY_OF_MONTH);
+//        int d =c.get(Calendar.DAY_OF_MONTH);
+//        return new DatePickerDialog(this,this,y,m,d);
+//    }
 }
