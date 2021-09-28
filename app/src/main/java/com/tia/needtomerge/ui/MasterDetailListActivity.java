@@ -29,16 +29,15 @@ public class MasterDetailListActivity extends AppCompatActivity implements
         AdapterView.OnItemClickListener, AdapterView.OnItemSelectedListener , DatePickerDialog.OnDateSetListener {
     ActivityMasterDetailListBinding binding;
     Spinner spin;
-    String[] country = { "India", "USA", "China", "Japan", "Other"};
+    String[] country = { "2020", "2021", "2019", "2018", "2017"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        binding= DataBindingUtil. setContentView(this,R.layout.activity_master_detail_list);
-        getSupportActionBar().hide();
+        getSupportActionBar().setTitle("Master Detail List");
         spin = findViewById(R.id.sp_assetsDetail);
         spin.setOnItemSelectedListener(this);
         setSpinnerAdapter();
-
     }
     private void setSpinnerAdapter(){
         ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,country);

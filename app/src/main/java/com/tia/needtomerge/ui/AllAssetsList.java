@@ -1,5 +1,8 @@
 package com.tia.needtomerge.ui;
 
+import static com.tia.needtomerge.constant.constants.ASSET_CODE;
+import static com.tia.needtomerge.constant.constants.ASSET_NAME;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
@@ -29,6 +32,7 @@ public class AllAssetsList extends AppCompatActivity implements AllAssetsClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("All Assets List");
        binding= DataBindingUtil. setContentView(this,R.layout.activity_all_assets_list);
 //        initToolbar();
         setAdapter();
@@ -70,8 +74,8 @@ public class AllAssetsList extends AppCompatActivity implements AllAssetsClickLi
     public void cardClicked(AllAssetsListModel f) {
         Log.d("rawat", "cardClicked: ");
         Intent intent = new Intent(AllAssetsList.this, AllAssetsDetail.class);
-//        intent.putExtra(ASSET_CODE,""+f.tagCode);
-//        intent.putExtra(ASSET_NAME,""+f.tagName);
+        intent.putExtra(ASSET_CODE,""+f.tagCode);
+        intent.putExtra(ASSET_NAME,""+f.tagName);
         startActivity(intent);
     }
 

@@ -63,7 +63,7 @@ public class AllAssetsListAdapter extends RecyclerView.Adapter<AllAssetsListAdap
         AllAssetsListModel datalist = dataModelList.get(i);
         viewHolder.binding.tvAndroidCode.setText(datalist.tagCode);
         viewHolder.binding.tvAndroidName.setText(datalist.tagName);
-        viewHolder.binding.tvAndroidCode.setOnClickListener(new View.OnClickListener() {
+        viewHolder.binding.tvAndroidName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), AllAssetsDetail.class);

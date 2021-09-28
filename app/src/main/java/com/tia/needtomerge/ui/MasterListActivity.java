@@ -26,6 +26,7 @@ public class MasterListActivity extends AppCompatActivity implements TicketClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Master list");
        binding= DataBindingUtil. setContentView(this,R.layout.activity_master_list);
        setAdapter();
     }

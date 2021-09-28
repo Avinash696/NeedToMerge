@@ -17,6 +17,7 @@ public class TicketDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Ticket Detail ");
        binding= DataBindingUtil. setContentView(this,R.layout.activity_ticket_detail);
     }
 

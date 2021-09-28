@@ -26,6 +26,7 @@ public class TicketListActivity extends AppCompatActivity implements TicketClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_ticket_list);
+        getSupportActionBar().setTitle("Ticket List ");
         binding = DataBindingUtil.setContentView(this, R.layout.activity_ticket_list);
         setAdapter();
 
